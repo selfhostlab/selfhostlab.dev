@@ -72,6 +72,8 @@ module.exports = () => {
           hostname: 'picsum.photos',
         },
       ],
+      loader: "custom",
+      loaderFile: './scripts/image-loader.js'
     },
     // async headers() {
     //   return [
@@ -89,6 +91,6 @@ module.exports = () => {
 
       return config
     },
-    // output: "export",
+    output: "export",
   })
 }
