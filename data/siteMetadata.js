@@ -1,14 +1,14 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Self Host Lab',
+  title: 'Self Host Labs',
   author: 'Karan Jadhav',
-  headerTitle: 'Self Host Lab',
+  headerTitle: 'Self Host Labs',
   description: 'A blog about self hosting and privacy',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://selfhostlabs.dev',
   siteRepo: 'https://github.com/selfhostlabs/selfhostlabs.dev',
-  siteLogo: '/static/images/Self Host Lab.png',
+  siteLogo: '/static/images/Self Host Labs.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'selfhostlabs@jadhav.dev',
   github: 'https://github.com/selfhostlabs',
