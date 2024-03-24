@@ -6,12 +6,12 @@ const siteMetadata = {
   description: 'A blog about self hosting and privacy',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://selfhostlab.dev',
-  siteRepo: 'https://github.com/selfhostlab/selfhostlab.dev',
+  siteUrl: 'https://selfhostlabs.dev',
+  siteRepo: 'https://github.com/selfhostlabs/selfhostlabs.dev',
   siteLogo: '/static/images/Self Host Lab.png',
   socialBanner: '/static/images/twitter-card.png',
-  email: 'selfhostlab@jadhav.dev',
-  github: 'https://github.com/selfhostlab',
+  email: 'selfhostlabs@jadhav.dev',
+  github: 'https://github.com/selfhostlabs',
   twitter: 'https://twitter.com/iamkaranjadhav',
   linkedin: 'https://www.linkedin.com/in/jadhav-karan/',
   locale: 'en-US',
@@ -43,7 +43,7 @@ const siteMetadata = {
       themeURL: '',
       // This corresponds to the `data-lang="en"` in giscus's configurations
       lang: 'en',
-      inputPosition: "top"
+      inputPosition: 'top',
     },
   },
   search: {

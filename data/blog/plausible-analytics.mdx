@@ -46,7 +46,7 @@ git clone https://github.com/plausible/community-edition.git
 ```
 output:
 ```bash
-ubuntu@selfhostlab:~$ git clone https://github.com/plausible/community-edition .
+ubuntu@selfhostlabs:~$ git clone https://github.com/plausible/community-edition .
 Cloning into 'analytics'...
 remote: Enumerating objects: 342, done.
 remote: Counting objects: 100% (210/210), done.
@@ -71,10 +71,10 @@ BASE_URL=replace-me
 SECRET_KEY_BASE=replace-me
 ```
 
-2. Replace the `BASE_URL` with the domain which you want to use for serving the analytics. In my case, I will be using `analytics.selfhostlab.dev`.
+2. Replace the `BASE_URL` with the domain which you want to use for serving the analytics. In my case, I will be using `analytics.selfhostlabs.dev`.
 
 ```bash
-BASE_URL=https://analytics.selfhostlab.dev
+BASE_URL=https://analytics.selfhostlabs.dev
 ```
 we have used https as we will be configuring the Caddy server to serve the Plausible Analytics using HTTPS later in the post.
 
@@ -85,7 +85,7 @@ openssl rand -base64 48
 ```
 output:
 ```bash
-ubuntu@selfhostlab:~/analytics$ openssl rand -base64 48
+ubuntu@selfhostlabs:~/analytics$ openssl rand -base64 48
 S6KYL2R9hEPBsjN2Lc8+Q8wjItcKZQ6OZgnH1OkeqkOwcfNSFWNKLL1ORuW1WF+p
 ```
 
@@ -98,7 +98,7 @@ SECRET_KEY_BASE=S6KYL2R9hEPBsjN2Lc8+Q8wjItcKZQ6OZgnH1OkeqkOwcfNSFWNKLL1ORuW1WF+p
 5. Here is the updated `plausible-conf.env` file.
 
 ```bash
-BASE_URL=https://analytics.selfhostlab.dev
+BASE_URL=https://analytics.selfhostlabs.dev
 SECRET_KEY_BASE=S6KYL2R9hEPBsjN2Lc8+Q8wjItcKZQ6OZgnH1OkeqkOwcfNSFWNKLL1ORuW1WF+p
 ```
 
@@ -125,16 +125,16 @@ plausible:
 ```yaml {3,5} showLineNumbers
 plausible:
     labels:
-      virtual.host: "analytics.selfhostlab.dev"
+      virtual.host: "analytics.selfhostlabs.dev"
       virtual.port: "8000"
-      virtual.tls-email: "lab@selfhostlab.dev"
+      virtual.tls-email: "lab@selfhostlabs.dev"
 ```
 
 8. Save and exit the file.
 
 ## Step 4: Configure DNS records for the domain
 
-1. Let's configure the DNS records for the domain which we are going to use to serve the Analytics. For this, we will create an A record pointing your domain to the IP address of the server. In my case, I will be using `analytics.selfhostlab.dev` as the domain to point to 159.65.157.121.
+1. Let's configure the DNS records for the domain which we are going to use to serve the Analytics. For this, we will create an A record pointing your domain to the IP address of the server. In my case, I will be using `analytics.selfhostlabs.dev` as the domain to point to 159.65.157.121.
 
 2. Login to your domain registrar and navigate to the DNS management section.
 3. Create an A record with the following details.
